@@ -131,7 +131,6 @@ echo ""
   -logFile - \
   -quit \
   -batchmode \
-  -nographics \
   -username "$UNITY_EMAIL" \
   -password "$UNITY_PASSWORD" \
   -customBuildName "$BUILD_NAME" \
