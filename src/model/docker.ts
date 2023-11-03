@@ -75,6 +75,7 @@ class Docker {
             --volume "${actionFolder}/platforms/ubuntu/entrypoint.sh:/entrypoint.sh:z" \
             --volume "${actionFolder}/unity-config:/usr/share/unity3d/config/:z" \
             --cpus=${dockerCpuLimit} \
+            --gpus=all \
             --memory=${dockerMemoryLimit} \
             ${sshAgent ? `--volume ${sshAgent}:/ssh-agent` : ''} \
             ${
@@ -118,6 +119,7 @@ class Docker {
             --volume "${actionFolder}/platforms/windows":"c:/steps" \
             --volume "${actionFolder}/BlankProject":"c:/BlankProject" \
             --cpus=${dockerCpuLimit} \
+            --gpus=all \
             --memory=${dockerMemoryLimit} \
             --isolation=${dockerIsolationMode} \
             ${image} \
